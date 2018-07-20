@@ -16,5 +16,10 @@ namespace Tarefas.Telas
 		{
 			InitializeComponent ();
 		}
-	}
+
+        public void AdicionarTarefa(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new Cadastro());
+        }
+    }
 }

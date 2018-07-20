@@ -4,9 +4,61 @@
              x:Class="Tarefas.Telas.Cadastro">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="LblNome" FontAttributes="Bold"/>
+            <Entry x:Name="TxtNome"/>
+            <Label Text="Prioridade" FontAttributes="Bold"/>
+
+            <StackLayout x:Name="SlPrioridades">
+                <StackLayout Spacing="10">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="StreamImageSource">
+                                <On Platform="Android, iOS" Value="4.png"/>
+                                <On Platform="UWP" Value="Resources/4.png"/>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Urgente e importante" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                
+                <StackLayout Spacing="10">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="StreamImageSource">
+                                <On Platform="Android, iOS" Value="3.png"/>
+                                <On Platform="UWP" Value="Resources/3.png"/>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Urgente e não importante" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                
+                <StackLayout Spacing="10">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="StreamImageSource">
+                                <On Platform="Android, iOS" Value="2.png"/>
+                                <On Platform="UWP" Value="Resources/2.png"/>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Não Urgente e importante" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                
+                <StackLayout Spacing="10">
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="StreamImageSource">
+                                <On Platform="Android, iOS" Value="1.png"/>
+                                <On Platform="UWP" Value="Resources/1.png"/>
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Não Urgente e não importante" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                
+            </StackLayout>
+            <Button Text="OK" HorizontalOptions="End" BackgroundColor="Blue" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
